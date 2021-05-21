@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
   let opDigimon = document.querySelector('.op-digimon')
   let opSprite = 0
   setInterval(function(){ 
-    console.log(opSprite);
     if (opSprite === 0) {
       opDigimon.src = 'agumon-2.png'
       opSprite = 1
