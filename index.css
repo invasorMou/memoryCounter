@@ -29,6 +29,7 @@
   
   .memory-value {
     position: relative;
+    z-index: 10;
     width: calc(100vw / 12.5);
     height: calc(100vw / 12.5);
     background: black;
