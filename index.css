@@ -1,6 +1,6 @@
 @media screen and (max-width: 900px) {
   html {
-    font-size: 40px;
+    font-size: 16px;
     font-family: 'Orbitron', sans-serif;
   }
   
@@ -24,14 +24,15 @@
   }
   
   .memory-value {
-    width: 60px;
-    height: 60px;
+    width: calc(100vw / 13);
+    height: calc(100vw / 13);
     background: black;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%
+    border-radius: 50%;
+    font-size: 4vw;
   }
   
   .above-row {
