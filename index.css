@@ -60,7 +60,7 @@
   }
   
   .current-memory, .current-memory .memory-0-bkg{
-    background: grey;
+    background: #ea9945;
     color: black;
     -webkit-text-fill-color: black;
   }
