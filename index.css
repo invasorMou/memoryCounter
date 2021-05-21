@@ -11,6 +11,9 @@
     width: 100vw;
     align-items: center;
     background: radial-gradient(#179adc 0, #0059a9 30%, #00419e 50%, #013192 75%);
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    box-sizing: border-box;
   }
   
   .memory-frame {
