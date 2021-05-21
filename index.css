@@ -10,7 +10,7 @@
     height: 100vh;
     width: 100vw;
     align-items: center;
-    background: #0d4d2b;
+    background: radial-gradient(#179adc 0, #0059a9 30%, #00419e 50%, #013192 75%);
   }
   
   .memory-frame {
@@ -24,26 +24,44 @@
   }
   
   .memory-value {
-    width: calc(100vw / 13);
-    height: calc(100vw / 13);
+    width: calc(100vw / 12.5);
+    height: calc(100vw / 12.5);
     background: black;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    font-size: 4vw;
+    font-size: 5vw;
   }
   
+  .enemy-memory {
+    transform: rotate(180deg);
+    background: white;
+    color: black;
+   }
+   
+  .memory-0 {
+    background: linear-gradient(to right, black 0, black 50%, white 50%);
+  }
+  
+  .memory-0-bkg {
+    background: linear-gradient(to right, white 0, white 50%, black 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .above-row {
     align-self: self-end;
+    transform: rotate(180deg);
   }
   
   .below-row {
     align-self: self-start;
   }
   
-  .current-memory {
+  .current-memory, .current-memory .memory-0-bkg{
     background: grey;
+    color: black;
+    -webkit-text-fill-color: black;
   }
 }
