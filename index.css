@@ -1,0 +1,48 @@
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 40px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    background: #0d4d2b;
+  }
+  
+  .memory-frame {
+    width: 100vw;
+    height: 60vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(11, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .memory-value {
+    width: 60px;
+    height: 60px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%
+  }
+  
+  .above-row {
+    align-self: self-end;
+  }
+  
+  .below-row {
+    align-self: self-start;
+  }
+  
+  .current-memory {
+    background: grey;
+  }
+}
