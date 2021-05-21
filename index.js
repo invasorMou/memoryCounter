@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let opDigimon = document.querySelector('.op-digimon')
   let opSprite = 0
   setInterval(function(){ 
+    console.log(opSprite);
     if (opSprite === 0) {
       opDigimon.src = 'agumon-2.png'
       opSprite = 1
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
       opDigimon.src = 'agumon-1.png'
       opSprite = 0
     }
-  }, 500);
+  }, 1000);
   
   let myDigimon = document.querySelector('.my-digimon')
   let mySprite = 0
@@ -38,6 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
       myDigimon.src = 'tentomon-1.png'
       mySprite = 0
     }
-  }, 500);
+  }, 1000);
 })
 
