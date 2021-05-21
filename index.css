@@ -27,6 +27,7 @@
   }
   
   .memory-value {
+    position: relative;
     width: calc(100vw / 12.5);
     height: calc(100vw / 12.5);
     background: black;
@@ -62,9 +63,59 @@
     align-self: self-start;
   }
   
-  .current-memory, .current-memory .memory-0-bkg{
+  .current-memory {
+    background: #ea9945;
+    color: black
+  } 
+  
+  .current-memory .memory-0-bkg{
     background: #ea9945;
     color: black;
     -webkit-text-fill-color: black;
+  }
+  
+  .connect-right::before {
+    content: '-';
+    color: white;
+    position: absolute;
+    left: -27%;
+    top: 0%;
+    z-index: -1;
+  }
+  
+  .connect-left::before {
+    content: '-';
+    color: black;
+    position: absolute;
+    left: -20%;
+    z-index: -1;
+  }
+  
+  .connect-below::before {
+    content: '-';
+    color: black;
+    position: absolute;
+    top: 75%;
+    left: 40%;
+    z-index: -1;
+    transform: rotate(91deg);
+  }
+  
+  .connect-above::before {
+    content: '-';
+    color: white;
+    position: absolute;
+    top: 74%;
+    left: 40%;
+    z-index: -1;
+    transform: rotate(91deg);
+  }
+  
+  .connect-right-0::after {
+    content: '-';
+    color: white;
+    position: absolute;
+    left: 90%;
+    z-index: -1;
   }
 }
