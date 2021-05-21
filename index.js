@@ -39,7 +39,5 @@ document.addEventListener('DOMContentLoaded', function() {
       mySprite = 0
     }
   }, 500);
-  
-  my-digimon
 })
 
