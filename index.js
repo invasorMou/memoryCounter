@@ -40,5 +40,12 @@ document.addEventListener('DOMContentLoaded', function() {
       mySprite = 0
     }
   }, spriteRatio);
+  
+  let wakeLock = null;
+
+  try {
+    wakeLock = await navigator.wakeLock.request('screen');
+  } catch (err) {
+  }
 })
 
