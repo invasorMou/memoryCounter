@@ -1,0 +1,16 @@
+{
+  "background_color": "#013192",
+  "description": "Memory counter for Digimon Card Game",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "icon/tentomon.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "name": "Memory Counter",
+  "short_name": "Mem Counter",
+  "start_url": "/index.html"
+}

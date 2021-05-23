@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   })
   
+  let spriteRatio = 500
   let opDigimon = document.querySelector('.op-digimon')
   let opSprite = 0
   setInterval(function(){ 
@@ -26,18 +27,18 @@ document.addEventListener('DOMContentLoaded', function() {
       opDigimon.src = 'agumon-1.png'
       opSprite = 0
     }
-  }, 1000);
+  }, spriteRatio);
   
   let myDigimon = document.querySelector('.my-digimon')
   let mySprite = 0
   setInterval(function(){ 
     if (mySprite === 0) {
-      myDigimon.src = 'tentomon-2.png'
+      myDigimon.src = 'gabumon-2.png'
       mySprite = 1
     } else {
-      myDigimon.src = 'tentomon-1.png'
+      myDigimon.src = 'gabumon-1.png'
       mySprite = 0
     }
-  }, 1000);
+  }, spriteRatio);
 })
 

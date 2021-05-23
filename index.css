@@ -1,123 +1,79 @@
-/* Memory Counter */
-@media screen and (max-width: 900px) {
-  html {
-    font-size: 16px;
-    font-family: 'Orbitron', sans-serif;
-  }
-  
-  body {
-    margin: 0;
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    align-items: center;
-    background: radial-gradient(#179adc 0, #0059a9 30%, #00419e 50%, #013192 75%);
-    border-top: 3px solid white;
-    border-bottom: 3px solid white;
-    box-sizing: border-box;
-  }
-  
-  .memory-frame {
-    width: 100vw;
-    height: 60vh;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: repeat(11, 1fr);
-    justify-items: center;
-    align-items: center;
-  }
-  
-  .memory-value {
-    position: relative;
-    z-index: 10;
-    width: calc(100vw / 12.5);
-    height: calc(100vw / 12.5);
-    background: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 5vw;
-  }
-  
-  .enemy-memory {
-    transform: rotate(180deg);
-    background: white;
-    color: black;
-   }
-   
-  .memory-0 {
-    background: linear-gradient(to right, black 0, black 50%, white 50%);
-  }
-  
-  .memory-0-bkg {
-    background: linear-gradient(to right, white 0, white 50%, black 50%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .above-row {
-    align-self: self-end;
-    transform: rotate(180deg);
-  }
-  
-  .below-row {
-    align-self: self-start;
-  }
-  
-  .current-memory {
-    background: #ea9945;
-    color: black
-  } 
-  
-  .current-memory .memory-0-bkg{
-    background: #ea9945;
-    color: black;
-    -webkit-text-fill-color: black;
-  }
-  /* 
-  .connect-right::before {
-    content: '-';
-    color: white;
-    position: absolute;
-    left: -27%;
-    top: 0%;
-    z-index: -1;
-  }
-  
-  .connect-left::before {
-    content: '-';
-    color: black;
-    position: absolute;
-    left: -20%;
-    z-index: -1;
-  }
-  
-  .connect-below::before {
-    content: '-';
-    color: black;
-    position: absolute;
-    top: 75%;
-    left: 40%;
-    z-index: -1;
-    transform: rotate(91deg) scaleX(4);
-  }
-  
-  .connect-above::before {
-    content: '-';
-    color: white;
-    position: absolute;
-    top: 74%;
-    left: 40%;
-    z-index: -1;
-    transform: rotate(91deg) scaleX(4);
-  }
-  
-  .connect-right-0::after {
-    content: '-';
-    color: white;
-    position: absolute;
-    left: 90%;
-    z-index: -1;
-  } */
+html {
+  font-size: 16px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  background: radial-gradient(#179adc 0, #0059a9 30%, #00419e 50%, #013192 75%);
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  box-sizing: border-box;
+}
+
+.memory-frame {
+  width: 100vw;
+  height: 60vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(11, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.memory-value {
+  position: relative;
+  z-index: 10;
+  width: calc(100vw / 12.5);
+  height: calc(100vw / 12.5);
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 5vw;
+}
+
+.enemy-memory {
+  transform: rotate(180deg);
+  background: white;
+  color: black;
+ }
+ 
+.memory-0 {
+  background: linear-gradient(to right, black 0, black 50%, white 50%);
+}
+
+.memory-0-bkg {
+  background: linear-gradient(to right, white 0, white 50%, black 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.above-row {
+  align-self: self-end;
+  transform: rotate(180deg);
+}
+
+.below-row {
+  align-self: self-start;
+}
+
+.current-memory {
+  background: #ea9945;
+  color: black
+} 
+
+.current-memory .memory-0-bkg{
+  background: #ea9945;
+  color: black;
+  -webkit-text-fill-color: black;
+}
+
+.op-digimon, .my-digimon {
+  width: calc(100vw / 12.5);
 }
