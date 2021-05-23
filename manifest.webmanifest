@@ -12,5 +12,5 @@
   ],
   "name": "Memory Counter",
   "short_name": "Mem Counter",
-  "start_url": "/index.html"
+  "start_url": "index.html"
 }
