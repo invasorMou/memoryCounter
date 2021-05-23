@@ -41,11 +41,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, spriteRatio);
   
-  let wakeLock = null;
+  let isSupported = false;
 
-  try {
-    wakeLock = await navigator.wakeLock.request('screen');
-  } catch (err) {
+  if ('wakeLock' in navigator) {
+    isSupported = true;
   }
+  
+  if (isSupported) {
+    let wakeLock = null;
+
+    const requestWakeLock = async () => {
+      try {
+        wakeLock = await navigator.wakeLock.request('screen');
+      } catch (err) {
+      }
+    }
+  }
+
 })
 
