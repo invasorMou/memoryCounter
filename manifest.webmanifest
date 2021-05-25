@@ -12,10 +12,11 @@
     {
       "src": "icon/tentomon144.png",
       "sizes": "144x144",
-      "type": "any"
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "name": "Memory Counter",
-  "short_name": "Mem Counter",
+  "short_name": "Memory Counter",
   "start_url": "index.html"
 }
