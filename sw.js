@@ -1,4 +1,5 @@
 self.addEventListener('install', (e) => {
+	console.log('test')
   e.waitUntil(
     caches.open('fox-store').then((cache) => cache.addAll([
       'index.html',
@@ -8,7 +9,6 @@ self.addEventListener('install', (e) => {
       'agumon-2.png',
       'gabumon-1.png',
       'gabumon-2.png',
-      'icon/tentomon.png',
     ])),
   );
 });

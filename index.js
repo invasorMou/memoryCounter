@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+	
+	if('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('/sw.js')
+			.catch(function(err){
+				console.log('SW not supported.')
+			})
+	}
   
   let memoryGauge = document.querySelectorAll('.memory-value')
   
