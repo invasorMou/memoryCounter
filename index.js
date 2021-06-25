@@ -67,23 +67,27 @@ document.addEventListener('DOMContentLoaded', function() {
   
 	myDigimon.addEventListener('touchstart', function(){ myDigiIdx < 7 ? myDigiIdx++ : myDigiIdx = 0 })
 
-  let isSupported = false;
-
-  if ('wakeLock' in navigator) {
-    isSupported = true;
-  }
   
-  if (isSupported) {
-    let wakeLock = null;
+	window.addEventListener('focus', () => {
+		let isSupported = false;
 
-    const requestWakeLock = async () => {
-      try {
-        wakeLock = await navigator.wakeLock.request('screen');
-      } catch (err) {
-      }
-    }
-    requestWakeLock()
-  }
+		if ('wakeLock' in navigator) {
+			isSupported = true;
+		}
+
+		if (isSupported) {
+			let wakeLock = null;
+
+			const requestWakeLock = async () => {
+				try {
+					wakeLock = await navigator.wakeLock.request('screen');
+				} catch (err) {
+				}
+			}
+			requestWakeLock()
+		}
+
+	})
 
 })
 
