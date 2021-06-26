@@ -66,28 +66,52 @@ document.addEventListener('DOMContentLoaded', function() {
   }, spriteRatio);
   
 	myDigimon.addEventListener('touchstart', function(){ myDigiIdx < 7 ? myDigiIdx++ : myDigiIdx = 0 })
+	
+})
 
-  
-	window.addEventListener('focus', () => {
-		let isSupported = false;
+let isSupported = false;
 
-		if ('wakeLock' in navigator) {
-			isSupported = true;
+if ('wakeLock' in navigator) {
+	isSupported = true;
+}
+
+let wakeLock = null;
+
+if (isSupported) {
+
+	const requestWakeLock = async () => {
+		try {
+			wakeLock = await navigator.wakeLock.request('screen');
+			wakeLock.addEventListener('release', () => {
+				wakeLock.released
+			})
+		} catch (err) {
+			console.log(`${ err.name }, ${ err.message }`)
 		}
+	}
 
-		if (isSupported) {
-			let wakeLock = null;
+	requestWakeLock()
 
-			const requestWakeLock = async () => {
-				try {
-					wakeLock = await navigator.wakeLock.request('screen');
-				} catch (err) {
-				}
+	document.addEventListener('visibilitychange', async () => {
+
+		let dot =	document.querySelector('.wakelock')
+		if( dot !== undefined) {
+			if( document.visibilityState === 'visible' && wakeLock !== null ) {
+
+				await requestWakeLock()
+				console.log('shows')
+				setTimeout(() => dot.style.background = 'green', 500)
+
+			} else if (document.visibilityState === 'hidden') {
+
+				console.log('hided')
+				setTimeout(() => dot.style.background = 'red', 200) 
+
 			}
-			requestWakeLock()
 		}
-
 	})
 
-})
+
+}
+
 

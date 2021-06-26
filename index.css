@@ -3,6 +3,12 @@ html {
   font-family: 'Orbitron', sans-serif;
 }
 
+.wakelock {
+	width: 30px;
+	height: 30px;
+	background: red;
+}
+
 body {
   margin: 0;
   display: flex;
